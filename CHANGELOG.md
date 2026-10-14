@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.3 — 2026-10-15
+
+- Refine the eye into a single gold silhouette with lifted feline corners and a negative-space vertical pupil.
+- Balance the mark against the existing silver frame; retain a subtle gold gradient without iris texture or highlights.
+- Visually inspect the regenerated icon at 256 px and 64 px.
+
 ## 0.1.2 — 2026-10-14
 
 - Simplify the central cat-eye mark to a smaller gold almond outline and slim vertical pupil.

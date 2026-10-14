@@ -1,6 +1,6 @@
 # Privacy
 
-PixelWatch 0.1.2 processes only sources deliberately selected by the user. Onboarding, an empty dashboard and the test suite never start screen recognition. Persisted active watches resume only with macOS authorization and an available matching source.
+PixelWatch 0.1.3 processes only sources deliberately selected by the user. Onboarding, an empty dashboard and the test suite never start screen recognition. Persisted active watches resume only with macOS authorization and an available matching source.
 
 All capture, image analysis and Vision text recognition run locally. The app contains no networking client, external API, cloud backend, telemetry, analytics, account or subscription. It never captures system audio or the microphone. ScreenCaptureKit's source authorization is controlled by macOS.
 

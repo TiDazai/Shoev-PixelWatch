@@ -2049,18 +2049,18 @@
         }
       }
     },
-    "Version 0.1.2 · MIT License": {
+    "Version 0.1.3 · MIT License": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Version 0.1.2 · MIT License"
+            "value": "Version 0.1.3 · MIT License"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Версия 0.1.2 · Лицензия MIT"
+            "value": "Версия 0.1.3 · Лицензия MIT"
           }
         }
       }
