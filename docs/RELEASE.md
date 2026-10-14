@@ -7,7 +7,7 @@ From the project directory:
 ./scripts/create-dmg.sh
 ```
 
-This creates `dist/SHOEV PixelWatch.app` and `dist/SHOEV-PixelWatch-0.1.4.dmg` using tools shipped with Xcode/macOS. The app contains arm64 and x86_64 slices and targets macOS 26.0. Native XCTest execution is verified on the current Apple Silicon host; Intel hardware testing is separate.
+This creates `dist/SHOEV PixelWatch.app` and `dist/SHOEV-PixelWatch-0.1.5.dmg` using tools shipped with Xcode/macOS. The app contains arm64 and x86_64 slices and targets macOS 26.0. Native XCTest execution is verified on the current Apple Silicon host; Intel hardware testing is separate.
 
 Equivalent manual build:
 
@@ -31,10 +31,10 @@ codesign --force --options runtime --timestamp \
 Submit the DMG using a Keychain-stored notarization profile you have configured, then staple and validate:
 
 ```sh
-xcrun notarytool submit dist/SHOEV-PixelWatch-0.1.4.dmg \
+xcrun notarytool submit dist/SHOEV-PixelWatch-0.1.5.dmg \
   --keychain-profile YOUR_PROFILE --wait
-xcrun stapler staple dist/SHOEV-PixelWatch-0.1.4.dmg
-xcrun stapler validate dist/SHOEV-PixelWatch-0.1.4.dmg
+xcrun stapler staple dist/SHOEV-PixelWatch-0.1.5.dmg
+xcrun stapler validate dist/SHOEV-PixelWatch-0.1.5.dmg
 codesign --verify --deep --strict 'dist/SHOEV PixelWatch.app'
 spctl --assess --type execute --verbose 'dist/SHOEV PixelWatch.app'
 ```

@@ -1,6 +1,6 @@
-# SHOEV PixelWatch 0.1.4
+# SHOEV PixelWatch 0.1.5
 
-<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — gold cat eye">
+<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — platinum pupil and silver frame">
 
 **Watch anything. Miss nothing.**
 
@@ -30,7 +30,7 @@ PixelWatch lives in your menu bar. Closing Dashboard leaves monitoring running. 
 - Local Vision OCR for English and Russian; case-insensitive, whitespace-normalized partial or whole-text matching.
 - Two or more confirmations, cooldown, one-shot/continuous rules, explicit pause/restart, source recovery and event history.
 - Native notifications with optional sound and navigation to the matching watch.
-- Dashboard, watch details, settings, onboarding, launch at login, light/dark appearance and a native platinum/gold/silver app icon.
+- Dashboard, watch details, settings, onboarding, launch at login, light/dark appearance and a transparent app icon with a platinum pupil and silver frame.
 - No screenshot storage, audio capture, telemetry or network code. Delete all local data from Privacy settings.
 
 ## Permissions

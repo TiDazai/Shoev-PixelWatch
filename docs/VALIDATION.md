@@ -1,6 +1,6 @@
 # Validation — 2026-10-15
 
-Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.4 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1 on 2026-10-14; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.4.
+Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.5 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1 on 2026-10-14; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.5.
 
 | Check | Result |
 | --- | --- |
@@ -13,15 +13,16 @@ Verification was performed on the available Apple Silicon macOS host using Xcode
 | DMG creation | Passed; app, Applications shortcut and MIT license included |
 | DMG checksum validation | `hdiutil verify` passed |
 | Minimum OS in packaged app | Both Mach-O slices and Info.plist require macOS 26.0 |
+| Icon transparency | PNG background samples have alpha 0; all 10 extracted ICNS sizes retain alpha 0 at the canvas corners |
 | Info.plist / Xcode project | `plutil -lint` passed |
 | Shared scheme / localization catalog | XML / JSON parsing passed; 173 translations audited |
 | Incremental localization regression | Compiled Russian/English tables verified after a repeated build |
 | Shell packaging scripts | `bash -n` passed |
 | Debug startup and onboarding | Original flow inspected; all onboarding strings now have Russian/English translations |
-| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.4 compiled with unchanged UI and the single gold pupil, solid platinum background and silver corners visually inspected at 256 px |
+| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.5 compiled with unchanged UI and the platinum pupil and silver corners on a transparent background visually inspected at 256 px |
 | Settings keyboard shortcut | Command-comma opens real functional settings |
 | Russian/English interface switching | Verified without restart, including the Russian dashboard and rule parameters |
-| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.4 rebuilt and signed, startup not repeated |
+| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.5 rebuilt and signed, startup not repeated |
 | Real screen/window monitoring with permission | **Not verified in this environment** |
 | Native notification delivery/click routing | Implemented, **not manually verified with an OS permission grant** |
 | Sleep/lock/hotplug/protected source matrix | Implemented safeguards; **hardware/manual verification pending** |
@@ -41,10 +42,10 @@ GitHub Actions verification for the current source: [macOS build and tests](http
 
 ## Delivered artifact
 
-`dist/SHOEV-PixelWatch-0.1.4.dmg` — SHA-256:
+`dist/SHOEV-PixelWatch-0.1.5.dmg` — SHA-256:
 
 ```text
-536d4c0dc8bd77ce25febf034e28292efd7d14709bee0c87fd6ef756b3e59b71
+485008745be4e1f2362b80cfb5a6ad6dff182c667af296cafa62cb6456441754
 ```
 
 The app and DMG are ad-hoc-signed preview artifacts. Source code is published at https://github.com/TiDazai/Shoev-PixelWatch. [RELEASE.md](RELEASE.md) documents Developer ID signing and Apple notarization for public distribution. No CPU or energy-use limits are asserted without profiling.

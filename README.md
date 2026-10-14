@@ -1,6 +1,6 @@
-# SHOEV PixelWatch 0.1.4
+# SHOEV PixelWatch 0.1.5
 
-<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — gold cat eye">
+<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — platinum pupil and silver frame">
 
 **Следите за всем. Не упускайте важное.**
 
@@ -71,7 +71,7 @@ Release и DMG:
 ./scripts/create-dmg.sh
 ```
 
-Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.4.dmg`.
+Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.5.dmg`.
 
 ## Проверки
 

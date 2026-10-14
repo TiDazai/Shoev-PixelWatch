@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.1.5 — 2026-10-15
+
+- Make the icon background fully transparent, retaining only silver viewfinder corners and a platinum vertical pupil.
+- Enlarge the complete mark proportionally to fit the icon canvas after removing the background plate.
+- Preserve alpha transparency in the PNG preview and every ICNS size.
+
 ## 0.1.4 — 2026-10-15
 
 - Reduce the central mark to a single gold vertical feline pupil.
