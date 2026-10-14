@@ -54,7 +54,7 @@ struct DashboardView: View {
             Divider()
             HStack {
                 Image(systemName: "lock.shield"); Text("All analysis stays on your Mac.")
-                Spacer(); Text("SHOEV PRODUCTS  /  0.1.1")
+                Spacer(); Text("SHOEV PRODUCTS  /  0.1.2")
             }.font(.caption2).foregroundStyle(.tertiary).padding(.horizontal,24).padding(.vertical,12)
         }.background(Design.background).tint(Design.accent).frame(minWidth: 920,minHeight: 640)
             .sheet(item: $editing) { WatchEditorView(store: store, watch: $0, existing: true) }

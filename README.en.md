@@ -1,4 +1,4 @@
-# SHOEV PixelWatch 0.1.1
+# SHOEV PixelWatch 0.1.2
 
 <img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — gold cat eye">
 

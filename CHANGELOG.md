@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.2 — 2026-10-14
+
+- Simplify the central cat-eye mark to a smaller gold almond outline and slim vertical pupil.
+- Remove iris fibers, reflections, dark fill and the extra border; keep the SHOEV platinum/silver frame.
+
 ## 0.1.1 — 2026-10-14
 
 - Require macOS 26.0 or newer across the app, test targets and core package.

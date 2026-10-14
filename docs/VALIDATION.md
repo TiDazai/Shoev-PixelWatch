@@ -1,6 +1,6 @@
 # Validation — 2026-10-14
 
-Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target for version 0.1.1.
+Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.2 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.2.
 
 | Check | Result |
 | --- | --- |
@@ -18,10 +18,10 @@ Verification was performed on the available Apple Silicon macOS host using Xcode
 | Incremental localization regression | Compiled Russian/English tables verified after a repeated build |
 | Shell packaging scripts | `bash -n` passed |
 | Debug startup and onboarding | Original flow inspected; all onboarding strings now have Russian/English translations |
-| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.1 compiled with unchanged UI and the new cat-eye app icon visually inspected |
+| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.2 compiled with unchanged UI and the smaller minimal cat-eye app icon visually inspected |
 | Settings keyboard shortcut | Command-comma opens real functional settings |
 | Russian/English interface switching | Verified without restart, including the Russian dashboard and rule parameters |
-| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.1 rebuilt and signed, startup not repeated |
+| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.2 rebuilt and signed, startup not repeated |
 | Real screen/window monitoring with permission | **Not verified in this environment** |
 | Native notification delivery/click routing | Implemented, **not manually verified with an OS permission grant** |
 | Sleep/lock/hotplug/protected source matrix | Implemented safeguards; **hardware/manual verification pending** |
@@ -37,14 +37,14 @@ No application Swift compilation errors or concurrency warnings remain. Xcode em
 
 Build/test logs are available in the ignored local directory `build/verification/`. The final XCTest result bundle is `build/Logs/Test/Test-PixelWatch-2026.10.14_14-26-12-+0400.xcresult`.
 
-GitHub Actions verification for 0.1.1: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions). The preceding 0.1.0 run passed on macOS 15; that version remains available as a separate release.
+GitHub Actions verification for the current source: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions). The preceding 0.1.0 run passed on macOS 15; that version remains available as a separate release.
 
 ## Delivered artifact
 
-`dist/SHOEV-PixelWatch-0.1.1.dmg` — SHA-256:
+`dist/SHOEV-PixelWatch-0.1.2.dmg` — SHA-256:
 
 ```text
-8272c0a1a273c9ef93529ee080c9c3f240e5bf64b43e336b5bf553c1920338aa
+ec760915d3b8ab08f14a832948a163e1317cca72f23d4588aa229390bf19bad8
 ```
 
 The app and DMG are ad-hoc-signed preview artifacts. Source code is published at https://github.com/TiDazai/Shoev-PixelWatch. [RELEASE.md](RELEASE.md) documents Developer ID signing and Apple notarization for public distribution. No CPU or energy-use limits are asserted without profiling.
