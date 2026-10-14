@@ -100,7 +100,7 @@ struct WatchDetailsView: View {
                 HStack(spacing: 24) {
                     metric("Checks", "\(d.successfulChecks)"); metric("Avg analysis", store.format("%.0f ms", d.averageMilliseconds)); metric("Frames skipped", "\(d.skippedFrames)"); metric("Capture retries", "\(d.captureErrors)")
                 }
-                if let date = watch.lastAnalysis { LabeledContent("Last successful check", value: date.formatted(date: .abbreviated,time: .standard)).font(.caption).foregroundStyle(.secondary) }
+                if let date = watch.lastAnalysis { LabeledContent("Last successful check", value: store.dateText(date)).font(.caption).foregroundStyle(.secondary) }
                 HStack { Button("Test Notification") { Task { await store.testNotification(watch.id) } }.disabled(!store.data.settings.notifications); Spacer(); Button("Select a new source", action: reselect) }
                 Divider()
                 Text("EVENT HISTORY").font(.caption.weight(.semibold)).foregroundStyle(.tertiary)
@@ -110,7 +110,7 @@ struct WatchDetailsView: View {
                         Text(EventPresentation.reason(event, language: store.data.settings.language)).font(.callout).textSelection(.enabled)
                         if let previous = EventPresentation.previous(event, language: store.data.settings.language) { Text(store.format("Previous: %@", previous)).font(.caption).foregroundStyle(.secondary) }
                         if let current = EventPresentation.current(event, language: store.data.settings.language) { Text(store.format("New: %@", current)).font(.caption).foregroundStyle(.secondary).textSelection(.enabled) }
-                        Text(event.date.formatted()).font(.caption2).foregroundStyle(.tertiary)
+                        Text(store.dateText(event.date)).font(.caption2).foregroundStyle(.tertiary)
                     }.padding(.vertical,6)
                 }
             }.padding(24)

@@ -6,6 +6,7 @@ import UserNotifications
         didSet { if oldValue.settings.language != data.settings.language { languageDidChange?(data.settings.language) } }
     }
     var languageDidChange: ((String) -> Void)?
+    func dateText(_ date: Date) -> String { date.formatted(Date.FormatStyle(date: .abbreviated, time: .standard).locale(Locale(identifier: data.settings.language))) }
     func text(_ key: String) -> String { L10n.text(key, language: data.settings.language) }
     func format(_ key: String, _ arguments: CVarArg...) -> String { L10n.format(key, arguments: arguments, language: data.settings.language) }
     @Published var previews: [UUID: CGImage] = [:]

@@ -24,7 +24,8 @@ Verification was performed on the available Apple Silicon macOS host using Xcode
 | Real screen/window monitoring with permission | **Not verified in this environment** |
 | Native notification delivery/click routing | Implemented, **not manually verified with an OS permission grant** |
 | Sleep/lock/hotplug/protected source matrix | Implemented safeguards; **hardware/manual verification pending** |
-| Intel execution / physical macOS 15 machine | **Not tested**; x86_64 build was verified |
+| GitHub Actions macOS 15 runner | Core/native tests, incremental localization, universal Release and DMG passed |
+| Physical monitor/sleep checks on Intel/macOS 15 | **Not manually tested** |
 | Developer ID signing / notarization | **Not performed**; no publishing credentials were provided |
 
 The app's own Privacy screen reports Screen Recording permission required. No Screen Recording or notification permission was granted during this task. Real screen capture and notification delivery require the user's OS grant; unit tests do not substitute for the six permission-dependent manual acceptance scenarios. Use [MANUAL-TESTING.md](MANUAL-TESTING.md) to finish that acceptance pass.
@@ -35,12 +36,14 @@ No application Swift compilation errors or concurrency warnings remain. Xcode em
 
 Build/test logs are available in the ignored local directory `build/verification/`. The final XCTest result bundle is `build/Logs/Test/Test-PixelWatch-2026.10.14_13-16-58-+0400.xcresult`.
 
+GitHub Actions verification: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions/runs/38543353223).
+
 ## Delivered artifact
 
 `dist/SHOEV-PixelWatch-0.1.0.dmg` — SHA-256:
 
 ```text
-637ecf41ffa7b15c2cdf42c9b09c4d13c5c7228c5742ca619bfd1dfe0237fcd9
+7cf5455481d8fde6e0af9854c6b16723c8b12c19d38fe295e1806eaea51d24d7
 ```
 
 The app and DMG are ad-hoc-signed preview artifacts. Source code is published at https://github.com/TiDazai/Shoev-PixelWatch. [RELEASE.md](RELEASE.md) documents Developer ID signing and Apple notarization for public distribution. No CPU or energy-use limits are asserted without profiling.
