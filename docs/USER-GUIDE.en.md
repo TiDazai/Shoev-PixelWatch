@@ -2,7 +2,7 @@
 
 1. Launch PixelWatch and finish onboarding. Grant Screen Recording for persistent monitoring when prompted.
 2. Click its menu bar icon and choose **New Watch**.
-3. Choose **Screen Region** or **Application Window**. In the macOS picker select one display/window. On macOS 15.0–15.1 select from the permission-gated source list instead.
+3. Choose **Screen Region** or **Application Window**. In the macOS picker select one display/window. Requires macOS 26.0 or newer.
 4. For Screen Region, drag a rectangle. Drag inside to move it; drag outside to redraw/resize it. Press Return to confirm, Escape to cancel. The dimensions are in display points; Retina scaling happens automatically.
 5. Name the watch and choose a rule. Click **Start Watching**. Notifications can be enabled after starting; event history works even if they are denied.
 

@@ -10,7 +10,7 @@ PixelWatch has two boundaries: a deterministic analysis core and a native platfo
 
 ## Capture and scheduling
 
-`SourceSelectionController` uses `SCContentSharingPicker` for one display or one window on 15.2+. Persistent source metadata (`includedDisplays`/`includedWindows`) was added in 15.2; 15.0–15.1 use `SCShareableContent` and explicit Screen Recording permission. Display identity uses a Core Graphics UUID. Window identity includes window ID, application bundle and process ID; no heuristic substitutes a new window after the source app restarts.
+`SourceSelectionController` uses `SCContentSharingPicker` for one display or one window, reading persistent source metadata from `includedDisplays`/`includedWindows`. The app supports macOS 26.0 and newer; no legacy source-selection path is retained. Display identity uses a Core Graphics UUID. Window identity includes window ID, application bundle and process ID; no heuristic substitutes a new window after the source app restarts.
 
 `AreaSelectionController` owns an AppKit panel on the selected `NSScreen`. Selection geometry is local to that screen, so desktop origins and monitor ordering cannot affect saved coordinates. `RegionGeometry` converts bottom-left AppKit coordinates to top-left capture coordinates. The panel closes and leaves WindowServer before a preview is requested. It is never a monitoring source.
 

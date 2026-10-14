@@ -1,4 +1,6 @@
-# SHOEV PixelWatch 0.1.0
+# SHOEV PixelWatch 0.1.1
+
+<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — gold cat eye">
 
 **Watch anything. Miss nothing.**
 
@@ -8,7 +10,7 @@ A native macOS menu bar utility from SHOEV SYSTEMS / SHOEV PRODUCTS. Select a sc
 
 ## Run
 
-Requires macOS 15.0 or newer. Open `PixelWatch.xcodeproj`, select the **PixelWatch** scheme and run. Xcode 16.2+ (macOS SDK 15.2+) is required; development and verification used Xcode 26.3 with the macOS 26.2 SDK. The project uses Swift 5 language mode with complete concurrency checking and Swift Concurrency APIs.
+Requires macOS 26.0 or newer. Open `PixelWatch.xcodeproj`, select the **PixelWatch** scheme and run. Xcode 26+ (macOS SDK 26+) is required; development and verification used Xcode 26.3 with the macOS 26.2 SDK. The project uses Swift 5 language mode with complete concurrency checking and Swift Concurrency APIs.
 
 ```sh
 xcodebuild -project PixelWatch.xcodeproj -scheme PixelWatch \
@@ -21,7 +23,7 @@ PixelWatch lives in your menu bar. Closing Dashboard leaves monitoring running. 
 ## Features
 
 - Five real detection modes: Any Visual Change, Text Appears, Text Disappears, Text Changes and Visual Change After Stability.
-- System ScreenCaptureKit source picker on macOS 15.2+, with an authorized source list on 15.0–15.1 because those SDK versions cannot expose persistent IDs from picker filters.
+- System ScreenCaptureKit source picker for one display or window. Only macOS 26.0 and newer are supported.
 - Crosshair screen region overlay with move, redraw, dimensions, Return confirmation and Escape cancellation. Display-local coordinates support Retina and monitors with negative desktop origins.
 - Desktop-independent window capture follows movement. Window identity includes its owner bundle and process ID; a replacement application instance must be selected explicitly.
 - Persistent, shared streams for identical source/region/interval combinations, a latest-frame buffer and serialized analysis for bounded backpressure.

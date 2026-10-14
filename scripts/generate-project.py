@@ -45,7 +45,7 @@ dep=obj('dependency',f'isa = PBXTargetDependency; target = {appID}; targetProxy 
 def configs(prefix, extra):
  ids=[]
  for name in ['Debug','Release']:
-  base='MACOSX_DEPLOYMENT_TARGET = 15.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_STRICT_CONCURRENCY = complete; '
+  base='MACOSX_DEPLOYMENT_TARGET = 26.0; SDKROOT = macosx; SWIFT_VERSION = 5.0; CLANG_ENABLE_MODULES = YES; SWIFT_STRICT_CONCURRENCY = complete; '
   base+= 'SWIFT_OPTIMIZATION_LEVEL = "-Onone"; DEBUG_INFORMATION_FORMAT = dwarf; ENABLE_TESTABILITY = YES; SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;' if name=='Debug' else 'SWIFT_OPTIMIZATION_LEVEL = "-O"; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";'
   ids.append(obj(prefix+name,f'isa = XCBuildConfiguration; buildSettings = {{ {base} {extra} }}; name = {name};'))
  return obj(prefix+'configlist',f'isa = XCConfigurationList; buildConfigurations = {arr(ids)}; defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;')

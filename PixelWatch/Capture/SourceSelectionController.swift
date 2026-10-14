@@ -2,8 +2,6 @@ import AppKit
 @preconcurrency import ScreenCaptureKit
 
 @MainActor final class SourceSelectionController: NSObject, SCContentSharingPickerObserver, ObservableObject {
-    @Published var legacySources: [CaptureSource] = []
-    @Published var showLegacy = false
     private let capture: CaptureService
     private let area = AreaSelectionController()
     private var kind = CaptureSource.Kind.display
@@ -16,43 +14,13 @@ import AppKit
     }
     func choose(_ kind: CaptureSource.Kind, completion: @escaping (CaptureSource, SCContentFilter, CGImage?) -> Void) {
         self.kind = kind; self.completion = completion
-        if #available(macOS 15.2, *) {
-            var config = SCContentSharingPickerConfiguration()
-            config.allowedPickerModes = kind == .display ? .singleDisplay : .singleWindow
-            config.excludedBundleIDs = [Bundle.main.bundleIdentifier ?? "systems.shoev.pixelwatch"]
-            config.allowsChangingSelectedContent = false
-            let picker = SCContentSharingPicker.shared
-            picker.configuration = config; picker.isActive = true
-            picker.present(using: kind == .display ? .display : .window)
-        } else {
-            // 15.0–15.1 cannot expose persistent IDs from the picker's filter.
-            Task {
-                guard PermissionService.screenAllowed else { PermissionService.requestScreen(); onError?("Allow Screen Recording and try again. macOS may require restarting PixelWatch."); return }
-                do {
-                    let content = try await capture.content()
-                    if kind == .display {
-                        legacySources = content.displays.map { makeDisplaySource($0) }
-                    } else {
-                        legacySources = content.windows.filter { $0.isOnScreen && $0.windowLayer == 0 && $0.owningApplication?.processID != ProcessInfo.processInfo.processIdentifier }.map { makeWindowSource($0) }
-                    }
-                    showLegacy = true
-                } catch { onError?(error.localizedDescription) }
-            }
-        }
-    }
-    func cancel() { showLegacy = false; completion = nil; onCancel?() }
-    func chooseLegacy(_ source: CaptureSource) {
-        showLegacy = false
-        Task {
-            do {
-                let content = try await capture.content()
-                if source.kind == .display, let display = content.displays.first(where: { $0.displayID == source.id }) {
-                    selected(source, filter: SCContentFilter(display: display, excludingWindows: []))
-                } else if let window = content.windows.first(where: { $0.windowID == source.id }) {
-                    selected(source, filter: SCContentFilter(desktopIndependentWindow: window))
-                }
-            } catch { onError?(error.localizedDescription) }
-        }
+        var config = SCContentSharingPickerConfiguration()
+        config.allowedPickerModes = kind == .display ? .singleDisplay : .singleWindow
+        config.excludedBundleIDs = [Bundle.main.bundleIdentifier ?? "systems.shoev.pixelwatch"]
+        config.allowsChangingSelectedContent = false
+        let picker = SCContentSharingPicker.shared
+        picker.configuration = config; picker.isActive = true
+        picker.present(using: kind == .display ? .display : .window)
     }
     private func makeDisplaySource(_ display: SCDisplay) -> CaptureSource {
         let uuid = CGDisplayCreateUUIDFromDisplayID(display.displayID).map { CFUUIDCreateString(nil, $0.takeRetainedValue()) as String }
@@ -85,11 +53,9 @@ import AppKit
     nonisolated func contentSharingPicker(_ picker: SCContentSharingPicker, didUpdateWith filter: SCContentFilter, for stream: SCStream?) {
         Task { @MainActor in
             guard self.completion != nil else { return }
-            if #available(macOS 15.2, *) {
-                if self.kind == .display, let display = filter.includedDisplays.first { self.selected(self.makeDisplaySource(display), filter: filter) }
-                else if let window = filter.includedWindows.first { self.selected(self.makeWindowSource(window), filter: filter) }
-                else { self.onError?("Select one display or one application window.") }
-            }
+            if self.kind == .display, let display = filter.includedDisplays.first { self.selected(self.makeDisplaySource(display), filter: filter) }
+            else if let window = filter.includedWindows.first { self.selected(self.makeWindowSource(window), filter: filter) }
+            else { self.onError?("Select one display or one application window.") }
         }
     }
     nonisolated func contentSharingPickerStartDidFailWithError(_ error: Error) {

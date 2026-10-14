@@ -78,11 +78,11 @@ import AppKit
     }
     @objc private func newWatch() { replacement = nil; chooseSource() }
     private func chooseSource() {
-        chooser = makeWindow(title:"Choose a source",size:NSSize(width:460,height:310),view:SourceChoiceView(selection:selection,choose:{ [weak self] kind in self?.beginSelection(kind) }))
+        chooser = makeWindow(title:"Choose a source",size:NSSize(width:460,height:310),view:SourceChoiceView(choose:{ [weak self] kind in self?.beginSelection(kind) }))
         show(chooser)
     }
     private func beginSelection(_ kind:CaptureSource.Kind) {
-        if #available(macOS 15.2, *) { chooser?.orderOut(nil) }; dashboard?.orderOut(nil); settings?.orderOut(nil)
+        chooser?.orderOut(nil); dashboard?.orderOut(nil); settings?.orderOut(nil)
         Task { @MainActor in
         await store.monitoring.setSuspended("selection", true)
         selection.language = store.data.settings.language
@@ -117,7 +117,6 @@ import AppKit
     private func show(_ window:NSWindow?) { NSApp.activate(ignoringOtherApps:true); window?.makeKeyAndOrderFront(nil) }
 }
 private struct SourceChoiceView:View {
-    @ObservedObject var selection:SourceSelectionController
     var choose:(CaptureSource.Kind)->Void
     var body:some View {
         VStack(alignment:.leading,spacing:20) {
@@ -130,8 +129,5 @@ private struct SourceChoiceView:View {
             }
             Text("macOS controls access. You choose exactly what to share.").font(.caption).foregroundStyle(.secondary)
         }.padding(24).buttonStyle(.bordered).tint(Design.accent)
-        .sheet(isPresented:$selection.showLegacy) {
-            VStack(alignment:.leading) { Text("Choose a source").font(.headline); List(selection.legacySources,id:\.id) { source in Button(source.name) {selection.chooseLegacy(source)} }; Button("Cancel") { selection.cancel() } }.padding().frame(width:520,height:400)
-        }
     }
 }

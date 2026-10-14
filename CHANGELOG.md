@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.1.1 — 2026-10-14
+
+- Require macOS 26.0 or newer across the app, test targets and core package.
+- Remove the macOS 15 legacy source list and availability branches; retain the native ScreenCaptureKit picker.
+- Move CI to macOS 26 with Xcode 26.3, keeping rule, OCR, capture and localization regression tests.
+- Replace the central icon pixel with a distinct gold feline iris, vertical pupil and platinum highlights; preserve the SHOEV metal frame and palette.
+
 ## 0.1.0 — 2026-10-14
 
 Initial native macOS implementation for SHOEV PRODUCTS.

@@ -13,7 +13,7 @@
 | No banner but history has an event | Check PixelWatch Notifications settings, OS authorization, Focus and system banner configuration. Detection works without permission. |
 | Notification test does nothing | Enable app notifications and OS permission. Test Notification reports denied permission; Focus can still suppress presentation. |
 | Too many visual changes | Lower sensitivity, increase confirmations, select a smaller region or use Change After Stability. Screen Region sees overlapping apps. |
-| Equal-brightness color changes are missed | The 0.1.0 grayscale comparator prioritizes shape/brightness and intentionally reduces color noise. |
+| Equal-brightness color changes are missed | The grayscale comparator prioritizes shape/brightness and intentionally reduces color noise. |
 | Source disappears during sleep | Expected. Capture stops; recovery establishes a fresh baseline rather than inventing an event. |
 | Launch at Login does not work | Keep the app in `/Applications`; inspect System Settings → General → Login Items. Toggle registration again after moving it. |
 | Saved JSON is corrupt | PixelWatch preserves it and refuses to overwrite it. Inspect/back up the shown local path. Delete All Local Data explicitly resets storage. |

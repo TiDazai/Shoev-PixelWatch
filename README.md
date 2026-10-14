@@ -1,4 +1,6 @@
-# SHOEV PixelWatch 0.1.0
+# SHOEV PixelWatch 0.1.1
+
+<img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — gold cat eye">
 
 **Следите за всем. Не упускайте важное.**
 
@@ -10,7 +12,7 @@
 
 ## Скачать и запустить
 
-Готовые сборки доступны в [GitHub Releases](https://github.com/TiDazai/Shoev-PixelWatch/releases). Минимальная система — **macOS 15.0**. Приложение собирается для **Apple Silicon и Intel**.
+Готовые сборки доступны в [GitHub Releases](https://github.com/TiDazai/Shoev-PixelWatch/releases). Минимальная система — **macOS 26.0**. Приложение собирается для **Apple Silicon и Intel**.
 
 1. Скачайте DMG, откройте его и перенесите SHOEV PixelWatch в «Программы».
 2. Запустите приложение. Оно работает в строке меню.
@@ -52,7 +54,7 @@
 
 ## Сборка из исходников
 
-Откройте `PixelWatch.xcodeproj`, выберите схему **PixelWatch** и нажмите Run. Сторонние зависимости и генераторы проекта не нужны. Для сборки нужен Xcode 16.2 или новее с SDK macOS 15.2+. Проверенное окружение: Xcode 26.3, Swift 6.2.4, macOS SDK 26.2.
+Откройте `PixelWatch.xcodeproj`, выберите схему **PixelWatch** и нажмите Run. Сторонние зависимости и генераторы проекта не нужны. Для сборки нужен Xcode 26 или новее с SDK macOS 26+. Проверенное окружение: Xcode 26.3, Swift 6.2.4, macOS SDK 26.2.
 
 ```sh
 git clone https://github.com/TiDazai/Shoev-PixelWatch.git
@@ -69,7 +71,7 @@ Release и DMG:
 ./scripts/create-dmg.sh
 ```
 
-Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.0.dmg`.
+Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.1.dmg`.
 
 ## Проверки
 
