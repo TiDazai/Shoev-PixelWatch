@@ -1,6 +1,6 @@
 # Validation — 2026-10-15
 
-Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.3 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1 on 2026-10-14; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.3.
+Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.4 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1 on 2026-10-14; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.4.
 
 | Check | Result |
 | --- | --- |
@@ -18,10 +18,10 @@ Verification was performed on the available Apple Silicon macOS host using Xcode
 | Incremental localization regression | Compiled Russian/English tables verified after a repeated build |
 | Shell packaging scripts | `bash -n` passed |
 | Debug startup and onboarding | Original flow inspected; all onboarding strings now have Russian/English translations |
-| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.3 compiled with unchanged UI and the refined gold silhouette and negative-space pupil visually inspected at 256 px and 64 px |
+| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.4 compiled with unchanged UI and the single gold pupil, solid platinum background and silver corners visually inspected at 256 px |
 | Settings keyboard shortcut | Command-comma opens real functional settings |
 | Russian/English interface switching | Verified without restart, including the Russian dashboard and rule parameters |
-| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.3 rebuilt and signed, startup not repeated |
+| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.4 rebuilt and signed, startup not repeated |
 | Real screen/window monitoring with permission | **Not verified in this environment** |
 | Native notification delivery/click routing | Implemented, **not manually verified with an OS permission grant** |
 | Sleep/lock/hotplug/protected source matrix | Implemented safeguards; **hardware/manual verification pending** |
@@ -41,10 +41,10 @@ GitHub Actions verification for the current source: [macOS build and tests](http
 
 ## Delivered artifact
 
-`dist/SHOEV-PixelWatch-0.1.3.dmg` — SHA-256:
+`dist/SHOEV-PixelWatch-0.1.4.dmg` — SHA-256:
 
 ```text
-62e7edb15aa171bbd5524f9e5edcac1de1da254e96dbdbc7bce618004d3ef8ba
+536d4c0dc8bd77ce25febf034e28292efd7d14709bee0c87fd6ef756b3e59b71
 ```
 
 The app and DMG are ad-hoc-signed preview artifacts. Source code is published at https://github.com/TiDazai/Shoev-PixelWatch. [RELEASE.md](RELEASE.md) documents Developer ID signing and Apple notarization for public distribution. No CPU or energy-use limits are asserted without profiling.

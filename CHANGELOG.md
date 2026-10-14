@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.4 — 2026-10-15
+
+- Reduce the central mark to a single gold vertical feline pupil.
+- Use a solid SHOEV platinum background and silver viewfinder corners; remove the eye silhouette and gold gradient.
+
 ## 0.1.3 — 2026-10-15
 
 - Refine the eye into a single gold silhouette with lifted feline corners and a negative-space vertical pupil.

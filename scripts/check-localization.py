@@ -10,7 +10,7 @@ formats=re.compile(r'%(?:\d+\$)?[-+0 #]*\d*(?:\.\d+)?(?:ll|l)?[@diufeg%]')
 for key,value in translations.items():
  assert catalog[key]['localizations']['ru']['stringUnit']['value']==value, key
  assert formats.findall(key)==formats.findall(value), 'Format arguments differ: '+key
-identity={'PixelWatch','SHOEV PixelWatch','SHOEV PRODUCTS','SHOEV PRODUCTS  /  0.1.3','SHOEV SYSTEMS\nSHOEV PRODUCTS','GitHub'}
+identity={'PixelWatch','SHOEV PixelWatch','SHOEV PRODUCTS','SHOEV PRODUCTS  /  0.1.4','SHOEV SYSTEMS\nSHOEV PRODUCTS','GitHub'}
 labels=re.compile(r'(?:Text|Button|Toggle|Picker|Label|LabeledContent|\.help|\.alert)\(\s*("(?:[^"\\]|\\.)*")')
 missing=[]
 for path in list((root/'PixelWatch/Views').glob('*.swift'))+[root/'PixelWatch/App/PixelWatchApp.swift']:
