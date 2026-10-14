@@ -1,12 +1,12 @@
 # Validation — 2026-10-15
 
-Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.6 adopts the approved logo throughout the app, uses SHOEV SYSTEMS as the sole company brand and removes sentence-ending periods from interface copy. The native suite passed 55 tests during logo integration; the final copy changes passed 8 targeted native localization tests and all 46 standalone core tests. The universal Release, embedded PNG/ICNS, signature and DMG were rebuilt and verified after the final changes.
+Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.6 adopts the approved logo throughout the app, uses SHOEV SYSTEMS as the sole company brand and removes sentence-ending periods from interface copy. The native suite passed 55 tests during logo integration; the final copy changes passed 8 targeted native localization tests and the standalone core tests: 44/46 passed initially, then all three OCR tests passed in an isolated retry after two transient Apple e5rt compute-operation failures. The universal Release, embedded PNG/ICNS, signature and DMG were rebuilt and verified after the final changes.
 
 | Check | Result |
 | --- | --- |
 | Xcode Debug compilation | Passed |
 | Xcode hosted XCTest, arm64 | **55 tests passed; final localization follow-up: 8 tests passed, 0 failures** |
-| Standalone Swift package XCTest | **46 tests passed, 0 failures** |
+| Standalone Swift package XCTest | 44/46 passed initially; **all 3 OCR tests passed on retry**, covering the two initial e5rt error 13 failures |
 | Release compilation | Passed for **arm64 and x86_64** |
 | Universal executable verification | `lipo -archs` reports `x86_64 arm64` |
 | Local code signature | `codesign --verify --deep --strict` passed (ad-hoc) |
@@ -38,7 +38,7 @@ No application Swift compilation errors or concurrency warnings remain. Xcode em
 
 Build/test logs are available in the ignored local directory `build/verification/`. The final XCTest result bundle is `build/Logs/Test/Test-PixelWatch-2026.10.15_00-52-41-+0400.xcresult`.
 
-GitHub Actions verification for the current source: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions). The preceding 0.1.0 run passed on macOS 15; that version remains available as a separate release.
+GitHub Actions verification for the final application code: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions/runs/38635983897). The later documentation-only commit records the local Vision retry and does not change the verified application sources.
 
 ## Delivered artifact
 
