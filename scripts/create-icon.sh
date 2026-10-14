@@ -12,3 +12,4 @@ for size in 16 32 128 256 512; do
 done
 iconutil -c icns "$stage/PixelWatch.iconset" -o "$root/PixelWatch/Resources/PixelWatch.icns"
 cp "$stage/master.png" "$root/docs/assets/PixelWatch-icon.png"
+cp "$stage/master.png" "$root/PixelWatch/Resources/BrandMark.png"

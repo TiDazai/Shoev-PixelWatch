@@ -9,11 +9,11 @@
 <key>CFBundleIconFile</key><string>PixelWatch.icns</string>
 <key>CFBundleName</key><string>SHOEV PixelWatch</string>
 <key>CFBundlePackageType</key><string>APPL</string>
-<key>CFBundleShortVersionString</key><string>0.1.5</string>
-<key>CFBundleVersion</key><string>6</string>
+<key>CFBundleShortVersionString</key><string>0.1.6</string>
+<key>CFBundleVersion</key><string>7</string>
 <key>LSMinimumSystemVersion</key><string>26.0</string>
 <key>LSUIElement</key><true/>
 <key>NSHighResolutionCapable</key><true/>
-<key>NSScreenCaptureUsageDescription</key><string>PixelWatch analyzes only screen regions and windows you choose, locally, to detect changes.</string>
+<key>NSScreenCaptureUsageDescription</key><string>PixelWatch analyzes only screen regions and windows you choose, locally, to detect changes</string>
 <key>NSPrincipalClass</key><string>NSApplication</string>
 </dict></plist>

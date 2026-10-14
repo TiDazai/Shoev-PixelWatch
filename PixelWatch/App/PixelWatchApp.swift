@@ -42,7 +42,7 @@ import AppKit
     }
     private func updateMenu() {
         guard let statusItem else { return }
-        statusItem.button?.image = NSImage(systemSymbolName:store.activeCount > 0 ? "viewfinder.circle.fill" : "viewfinder",accessibilityDescription:"PixelWatch")
+        statusItem.button?.image = AppBrand.menuLogo
         statusItem.button?.title = store.data.settings.menuShowsCount && store.activeCount > 0 ? " \(store.activeCount)" : ""
         let menu = NSMenu()
         add(store.text("New Watch…"),#selector(newWatch),to:menu,key:"n")

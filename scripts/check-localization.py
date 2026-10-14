@@ -9,8 +9,10 @@ assert set(translations)==set(catalog), 'Translation key sets differ'
 formats=re.compile(r'%(?:\d+\$)?[-+0 #]*\d*(?:\.\d+)?(?:ll|l)?[@diufeg%]')
 for key,value in translations.items():
  assert catalog[key]['localizations']['ru']['stringUnit']['value']==value, key
+ assert catalog[key]['localizations']['en']['stringUnit']['value']==re.sub(r'\.(?=\s|$)','',key), key
+ assert not re.search(r'\.(?=\s|$)',value), 'Sentence-ending period in UI copy: '+key
  assert formats.findall(key)==formats.findall(value), 'Format arguments differ: '+key
-identity={'PixelWatch','SHOEV PixelWatch','SHOEV PRODUCTS','SHOEV PRODUCTS  /  0.1.5','SHOEV SYSTEMS\nSHOEV PRODUCTS','GitHub'}
+identity={'PixelWatch','SHOEV PixelWatch','SHOEV SYSTEMS','SHOEV SYSTEMS  /  0.1.6','SHOEV SYSTEMS','GitHub'}
 labels=re.compile(r'(?:Text|Button|Toggle|Picker|Label|LabeledContent|\.help|\.alert)\(\s*("(?:[^"\\]|\\.)*")')
 missing=[]
 for path in list((root/'PixelWatch/Views').glob('*.swift'))+[root/'PixelWatch/App/PixelWatchApp.swift']:

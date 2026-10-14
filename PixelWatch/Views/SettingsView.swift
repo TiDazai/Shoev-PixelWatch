@@ -89,12 +89,12 @@ struct SettingsView: View {
     }
     private var about: some View {
         VStack(spacing: 14) {
-            Image(systemName:"viewfinder").font(.system(size:48,weight:.light)).foregroundStyle(Design.gold)
+            BrandLogo().frame(width: 64, height: 64)
             Text("SHOEV PixelWatch").font(.title2.bold())
-            Text("Watch anything. Miss nothing.").foregroundStyle(.secondary)
-            Text("Version 0.1.5 · MIT License").font(.caption)
-            Text("SHOEV SYSTEMS\nSHOEV PRODUCTS").multilineTextAlignment(.center).font(.caption).foregroundStyle(Design.silver)
-            Text("Free. Local. No subscriptions.").font(.caption)
+            Text("Watch anything, miss nothing").foregroundStyle(.secondary)
+            Text("Version 0.1.6 · MIT License").font(.caption)
+            Text("SHOEV SYSTEMS").multilineTextAlignment(.center).font(.caption).foregroundStyle(Design.silver)
+            Text("Free and local, without subscriptions").font(.caption)
             Link("GitHub", destination: URL(string: "https://github.com/TiDazai/Shoev-PixelWatch")!).font(.caption).foregroundStyle(Design.accent)
         }.frame(maxWidth:.infinity,maxHeight:.infinity)
     }

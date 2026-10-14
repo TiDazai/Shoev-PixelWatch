@@ -1,5 +1,29 @@
 import SwiftUI
 
+@MainActor enum AppBrand {
+    static let logo: NSImage = {
+        guard let url = Bundle.main.url(forResource: "BrandMark", withExtension: "png"),
+              let image = NSImage(contentsOf: url) else {
+            preconditionFailure("Missing packaged BrandMark.png")
+        }
+        image.accessibilityDescription = "SHOEV PixelWatch"
+        return image
+    }()
+    static let menuLogo: NSImage = {
+        let image = logo.copy() as! NSImage
+        image.size = NSSize(width: 20, height: 20)
+        image.isTemplate = true
+        return image
+    }()
+}
+
+struct BrandLogo: View {
+    var body: some View {
+        Image(nsImage: AppBrand.logo).resizable().interpolation(.high).scaledToFit()
+            .accessibilityLabel("SHOEV PixelWatch")
+    }
+}
+
 enum Design {
     // SHOEV SYSTEMS: website palette + a contrast-adjusted gold for native controls.
     static let platinum = Color(nsColor: colour(0xE6E6EC))

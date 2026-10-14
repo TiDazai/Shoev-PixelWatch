@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.1.6 — 2026-10-15
+
+- Remove sentence-ending periods from Russian/English interface copy while preserving version numbers, saved event keys and user/OCR text.
+- Use SHOEV SYSTEMS as the sole company brand across the app, demo, localization and documentation.
+- Adopt the approved transparent silver-frame/platinum-pupil mark as the primary app identity.
+- Use the same generated artwork for the macOS icon, dashboard header and empty state, onboarding welcome and About screen.
+- Replace the menu-bar system symbol with a template version of the brand mark that follows macOS appearance.
+- Package BrandMark.png and regenerate it alongside the ICNS and documentation preview from one vector source.
+
 ## 0.1.5 — 2026-10-15
 
 - Make the icon background fully transparent, retaining only silver viewfinder corners and a platinum vertical pupil.
@@ -31,7 +40,7 @@
 
 ## 0.1.0 — 2026-10-14
 
-Initial native macOS implementation for SHOEV PRODUCTS.
+Initial native macOS implementation for SHOEV SYSTEMS.
 
 - ScreenCaptureKit display/window selection, screen-region overlay and persistent capture sessions.
 - Five independent detection modes with confirmation, rearming, cooldown, one-shot and continuous operation.
@@ -44,7 +53,7 @@ Initial native macOS implementation for SHOEV PRODUCTS.
 
 ### SHOEV branding and Russian UI
 
-- Adopted the SHOEV platinum/gold/silver palette from existing SHOEV products; regenerated the native icon and offline test page.
+- Adopted the SHOEV platinum/gold/silver palette from existing SHOEV SYSTEMS applications; regenerated the native icon and offline test page.
 - Added complete Russian/English localization, immediate language switching, native menu/window/overlay translations and localized notifications/history.
 - Added backwards-compatible event presentation metadata, localization catalog/format audits and compiled resource regression coverage.
 - Prepared a dedicated public GitHub repository and automated macOS build/test workflow.

@@ -17,8 +17,8 @@ res='PixelWatch/Resources/Localizable.xcstrings';f=obj('file:'+res,f'isa = PBXFi
 icon='PixelWatch/Resources/PixelWatch.icns';f=obj('file:'+icon,f'isa = PBXFileReference; lastKnownFileType = image.icns; path = {q(icon)}; sourceTree = SOURCE_ROOT;');fileIDs.append(f);iconBuild=obj('build:'+icon,f'isa = PBXBuildFile; fileRef = {f};')
 license='PixelWatch/Resources/LICENSE.txt';f=obj('file:'+license,f'isa = PBXFileReference; lastKnownFileType = text; path = {q(license)}; sourceTree = SOURCE_ROOT;');fileIDs.append(f);licenseBuild=obj('build:'+license,f'isa = PBXBuildFile; fileRef = {f};')
 extraResourceBuilds=[]
-for resource in ['Translations.json']:
- path='PixelWatch/Resources/'+resource;kind='folder' if resource.endswith('.lproj') else 'text.json';f=obj('file:'+path,f'isa = PBXFileReference; lastKnownFileType = {kind}; path = {q(path)}; sourceTree = SOURCE_ROOT;');fileIDs.append(f);extraResourceBuilds.append(obj('build:'+path,f'isa = PBXBuildFile; fileRef = {f};'))
+for resource in ['Translations.json', 'BrandMark.png']:
+ path='PixelWatch/Resources/'+resource;kind='image.png' if resource.endswith('.png') else 'text.json';f=obj('file:'+path,f'isa = PBXFileReference; lastKnownFileType = {kind}; path = {q(path)}; sourceTree = SOURCE_ROOT;');fileIDs.append(f);extraResourceBuilds.append(obj('build:'+path,f'isa = PBXBuildFile; fileRef = {f};'))
 permissionFiles=[]
 for language in ['en','ru']:
  path='PixelWatch/Resources/'+language+'.lproj/InfoPlist.strings';f=obj('file:'+path,f'isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = {language}; path = {q(path)}; sourceTree = SOURCE_ROOT;');permissionFiles.append(f)

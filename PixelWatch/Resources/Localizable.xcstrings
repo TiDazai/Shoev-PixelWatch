@@ -262,29 +262,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Keep an eye on what matters."
+            "value": "Keep an eye on what matters"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Следите за тем, что важно."
-          }
-        }
-      }
-    },
-    "Select an area. Set a rule. Get notified.\nPixelWatch keeps watching while you get back to work.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Select an area. Set a rule. Get notified.\nPixelWatch keeps watching while you get back to work."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Выберите область. Задайте правило. Получите уведомление.\nPixelWatch продолжит следить, пока вы занимаетесь своими делами."
+            "value": "Следите за тем, что важно"
           }
         }
       }
@@ -305,34 +289,18 @@
         }
       }
     },
-    "Local processing. No accounts. No cloud.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Local processing. No accounts. No cloud."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Всё локально. Без аккаунтов и облака."
-          }
-        }
-      }
-    },
     "All analysis stays on your Mac.": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "All analysis stays on your Mac."
+            "value": "All analysis stays on your Mac"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Весь анализ выполняется на вашем Mac."
+            "value": "Весь анализ выполняется на вашем Mac"
           }
         }
       }
@@ -342,13 +310,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select a watch to see its details."
+            "value": "Select a watch to see its details"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выберите наблюдение, чтобы увидеть подробности."
+            "value": "Выберите наблюдение, чтобы увидеть подробности"
           }
         }
       }
@@ -454,13 +422,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The rule and its event history will be removed."
+            "value": "The rule and its event history will be removed"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Правило и история его срабатываний будут удалены."
+            "value": "Правило и история его срабатываний будут удалены"
           }
         }
       }
@@ -710,13 +678,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No events yet. PixelWatch is ready when you are."
+            "value": "No events yet PixelWatch is ready when you are"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Событий пока нет. PixelWatch готов к работе."
+            "value": "Событий пока нет PixelWatch готов к работе"
           }
         }
       }
@@ -758,13 +726,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This watch follows visible pixels in a fixed screen region."
+            "value": "This watch follows visible pixels in a fixed screen region"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение отслеживает видимые пиксели в фиксированной области экрана."
+            "value": "Наблюдение отслеживает видимые пиксели в фиксированной области экрана"
           }
         }
       }
@@ -774,13 +742,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "This watch follows the selected window. Restore it if minimized."
+            "value": "This watch follows the selected window Restore it if minimized"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение следует за выбранным окном. Разверните окно, если оно свёрнуто."
+            "value": "Наблюдение следует за выбранным окном Разверните окно, если оно свёрнуто"
           }
         }
       }
@@ -1014,13 +982,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Case-insensitive. English and Russian text are recognized locally."
+            "value": "Case-insensitive English and Russian text are recognized locally"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Без учёта регистра. Русский и английский текст распознаются локально."
+            "value": "Без учёта регистра Русский и английский текст распознаются локально"
           }
         }
       }
@@ -1222,13 +1190,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Screen Region follows visible pixels. Another window covering this area will change what PixelWatch sees."
+            "value": "Screen Region follows visible pixels Another window covering this area will change what PixelWatch sees"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Область экрана отслеживает видимые пиксели. Если её перекроет другое окно, PixelWatch увидит его содержимое."
+            "value": "Область экрана отслеживает видимые пиксели Если её перекроет другое окно, PixelWatch увидит его содержимое"
           }
         }
       }
@@ -1238,13 +1206,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Window Mode follows this window when it moves. Minimized, closed or protected windows may be unavailable."
+            "value": "Window Mode follows this window when it moves Minimized, closed or protected windows may be unavailable"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение следует за окном при перемещении. Свёрнутые, закрытые или защищённые окна могут быть недоступны."
+            "value": "Наблюдение следует за окном при перемещении Свёрнутые, закрытые или защищённые окна могут быть недоступны"
           }
         }
       }
@@ -1254,13 +1222,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow notifications after starting to receive alerts. Events also appear in your dashboard."
+            "value": "Allow notifications after starting to receive alerts Events also appear in your dashboard"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "После запуска разрешите уведомления. Все срабатывания также появятся в панели наблюдений."
+            "value": "После запуска разрешите уведомления Все срабатывания также появятся в панели наблюдений"
           }
         }
       }
@@ -1334,13 +1302,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "A fixed area of visible pixels on a display."
+            "value": "A fixed area of visible pixels on a display"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Фиксированная область видимых пикселей на мониторе."
+            "value": "Фиксированная область видимых пикселей на мониторе"
           }
         }
       }
@@ -1366,13 +1334,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Follow a window as it moves."
+            "value": "Follow a window as it moves"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение за окном при его перемещении."
+            "value": "Наблюдение за окном при его перемещении"
           }
         }
       }
@@ -1382,13 +1350,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "macOS controls access. You choose exactly what to share."
+            "value": "macOS controls access You choose exactly what to share"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "macOS управляет доступом. Вы выбираете, что разрешить видеть."
+            "value": "macOS управляет доступом Вы выбираете, что разрешить видеть"
           }
         }
       }
@@ -1398,13 +1366,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Welcome to PixelWatch."
+            "value": "Welcome to PixelWatch"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Добро пожаловать в PixelWatch."
+            "value": "Добро пожаловать в PixelWatch"
           }
         }
       }
@@ -1414,13 +1382,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select any area of your screen."
+            "value": "Select any area of your screen"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выберите любую область экрана."
+            "value": "Выберите любую область экрана"
           }
         }
       }
@@ -1430,13 +1398,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Tell PixelWatch what to watch for."
+            "value": "Tell PixelWatch what to watch for"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Укажите, за чем следить."
+            "value": "Укажите, за чем следить"
           }
         }
       }
@@ -1446,45 +1414,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Get notified when it happens."
+            "value": "Get notified when it happens"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Получите уведомление в нужный момент."
-          }
-        }
-      }
-    },
-    "Your screen. Your permission.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Your screen. Your permission."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Ваш экран. Ваше разрешение."
-          }
-        }
-      }
-    },
-    "Watch anything. Miss nothing.\nA small utility from SHOEV PRODUCTS.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Watch anything. Miss nothing.\nA small utility from SHOEV PRODUCTS."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Следите за всем. Не упускайте важное.\nКомпактная утилита от SHOEV PRODUCTS."
+            "value": "Получите уведомление в нужный момент"
           }
         }
       }
@@ -1494,13 +1430,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Choose a screen region or an application window.\nUse a small area for focused, efficient monitoring."
+            "value": "Choose a screen region or an application window\nUse a small area for focused, efficient monitoring"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выберите область экрана или окно приложения.\nНебольшая область делает наблюдение точнее и экономнее."
+            "value": "Выберите область экрана или окно приложения\nНебольшая область делает наблюдение точнее и экономнее"
           }
         }
       }
@@ -1510,13 +1446,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Watch for a visual change, text appearing,\ntext disappearing or a status changing."
+            "value": "Watch for a visual change, text appearing,\ntext disappearing or a status changing"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Отслеживайте визуальные изменения, появление\nи исчезновение текста или смену статуса."
+            "value": "Отслеживайте визуальные изменения, появление\nи исчезновение текста или смену статуса"
           }
         }
       }
@@ -1526,13 +1462,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Keep working. PixelWatch stays in your menu bar\nand records events even without notification permission."
+            "value": "Keep working PixelWatch stays in your menu bar\nand records events even without notification permission"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Продолжайте работу. PixelWatch останется в строке меню\nи сохранит события даже без разрешения на уведомления."
+            "value": "Продолжайте работу PixelWatch останется в строке меню\nи сохранит события даже без разрешения на уведомления"
           }
         }
       }
@@ -1542,13 +1478,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "PixelWatch needs Screen Recording access for saved watches.\nAll analysis is local. No audio is recorded.\nmacOS may require a restart after permission is granted."
+            "value": "PixelWatch needs Screen Recording access for saved watches\nAll analysis is local No audio is recorded\nmacOS may require a restart after permission is granted"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Для сохранённых наблюдений нужен доступ к записи экрана.\nВесь анализ локальный. Звук не записывается.\nПосле выдачи разрешения macOS может попросить перезапуск."
+            "value": "Для сохранённых наблюдений нужен доступ к записи экрана\nВесь анализ локальный Звук не записывается\nПосле выдачи разрешения macOS может попросить перезапуск"
           }
         }
       }
@@ -1782,13 +1718,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Language changes apply immediately to all app windows and menu items."
+            "value": "Language changes apply immediately to all app windows and menu items"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Язык меняется сразу во всех окнах приложения и в меню."
+            "value": "Язык меняется сразу во всех окнах приложения и в меню"
           }
         }
       }
@@ -1942,13 +1878,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "After enabling Screen Recording, macOS may ask you to quit and reopen PixelWatch. System picker access may be limited to this session."
+            "value": "After enabling Screen Recording, macOS may ask you to quit and reopen PixelWatch System picker access may be limited to this session"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "После разрешения записи экрана macOS может попросить перезапустить PixelWatch. Доступ через системный выбор источника может действовать только в текущем сеансе."
+            "value": "После разрешения записи экрана macOS может попросить перезапустить PixelWatch Доступ через системный выбор источника может действовать только в текущем сеансе"
           }
         }
       }
@@ -1958,13 +1894,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Screenshots and OCR are processed locally in memory. No audio, cloud services, telemetry or image files. Only rules, settings and event text are saved."
+            "value": "Screenshots and OCR are processed locally in memory No audio, cloud services, telemetry or image files Only rules, settings and event text are saved"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Изображения и текст обрабатываются локально в памяти. Нет записи звука, облака, телеметрии и сохранения снимков. Сохраняются только правила, настройки и текст событий."
+            "value": "Изображения и текст обрабатываются локально в памяти Нет записи звука, облака, телеметрии и сохранения снимков Сохраняются только правила, настройки и текст событий"
           }
         }
       }
@@ -2033,50 +1969,18 @@
         }
       }
     },
-    "Watch anything. Miss nothing.": {
+    "Version 0.1.6 · MIT License": {
       "localizations": {
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Watch anything. Miss nothing."
+            "value": "Version 0.1.6 · MIT License"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Следите за всем. Не упускайте важное."
-          }
-        }
-      }
-    },
-    "Version 0.1.5 · MIT License": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Version 0.1.5 · MIT License"
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Версия 0.1.5 · Лицензия MIT"
-          }
-        }
-      }
-    },
-    "Free. Local. No subscriptions.": {
-      "localizations": {
-        "en": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Free. Local. No subscriptions."
-          }
-        },
-        "ru": {
-          "stringUnit": {
-            "state": "translated",
-            "value": "Бесплатно. Локально. Без подписок."
+            "value": "Версия 0.1.6 · Лицензия MIT"
           }
         }
       }
@@ -2118,13 +2022,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Monitoring stops. All saved rules, settings and event history are permanently deleted."
+            "value": "Monitoring stops All saved rules, settings and event history are permanently deleted"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение остановится. Все сохранённые правила, настройки и история событий будут удалены без возможности восстановления."
+            "value": "Наблюдение остановится Все сохранённые правила, настройки и история событий будут удалены без возможности восстановления"
           }
         }
       }
@@ -2166,13 +2070,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Local data could not be loaded. The original file was preserved: %@"
+            "value": "Local data could not be loaded The original file was preserved: %@"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Не удалось загрузить локальные данные. Исходный файл сохранён: %@"
+            "value": "Не удалось загрузить локальные данные Исходный файл сохранён: %@"
           }
         }
       }
@@ -2198,13 +2102,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Notifications are disabled. Enable PixelWatch in System Settings → Notifications."
+            "value": "Notifications are disabled Enable PixelWatch in System Settings → Notifications"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Уведомления отключены. Разрешите их для PixelWatch в системных настройках → Уведомления."
+            "value": "Уведомления отключены Разрешите их для PixelWatch в системных настройках → Уведомления"
           }
         }
       }
@@ -2214,13 +2118,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Your PixelWatch notifications are ready."
+            "value": "Your PixelWatch notifications are ready"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Уведомления PixelWatch готовы к работе."
+            "value": "Уведомления PixelWatch готовы к работе"
           }
         }
       }
@@ -2246,13 +2150,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The event was recorded, but its notification could not be delivered."
+            "value": "The event was recorded, but its notification could not be delivered"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Событие сохранено, но уведомление не удалось доставить."
+            "value": "Событие сохранено, но уведомление не удалось доставить"
           }
         }
       }
@@ -2262,13 +2166,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Monitoring resumes when the Mac and source are available."
+            "value": "Monitoring resumes when the Mac and source are available"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Наблюдение возобновится, когда Mac и источник станут доступны."
+            "value": "Наблюдение возобновится, когда Mac и источник станут доступны"
           }
         }
       }
@@ -2278,13 +2182,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow Screen Recording, or use Select a new source in this watch’s details."
+            "value": "Allow Screen Recording, or use Select a new source in this watch’s details"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Разрешите запись экрана или нажмите «Выбрать новый источник» в подробностях наблюдения."
+            "value": "Разрешите запись экрана или нажмите «Выбрать новый источник» в подробностях наблюдения"
           }
         }
       }
@@ -2294,13 +2198,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Screen capture is unavailable. Check permission and re-select the source."
+            "value": "Screen capture is unavailable Check permission and re-select the source"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Захват экрана недоступен. Проверьте разрешение и выберите источник заново."
+            "value": "Захват экрана недоступен Проверьте разрешение и выберите источник заново"
           }
         }
       }
@@ -2310,13 +2214,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The source is blank or protected. No condition was evaluated."
+            "value": "The source is blank or protected No condition was evaluated"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Источник пуст или защищён. Условие не проверялось."
+            "value": "Источник пуст или защищён Условие не проверялось"
           }
         }
       }
@@ -2326,13 +2230,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "OCR is inconclusive; waiting for readable text."
+            "value": "OCR is inconclusive; waiting for readable text"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Не удалось уверенно распознать текст. Ожидаем читаемый результат."
+            "value": "Не удалось уверенно распознать текст Ожидаем читаемый результат"
           }
         }
       }
@@ -2342,13 +2246,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Capture could not start."
+            "value": "Capture could not start"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Не удалось начать захват."
+            "value": "Не удалось начать захват"
           }
         }
       }
@@ -2358,13 +2262,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "No available frame. The source may be sleeping, minimized or protected."
+            "value": "No available frame The source may be sleeping, minimized or protected"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Кадр недоступен. Источник может быть в режиме сна, свёрнут или защищён."
+            "value": "Кадр недоступен Источник может быть в режиме сна, свёрнут или защищён"
           }
         }
       }
@@ -2374,13 +2278,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Screen sharing was stopped. Resume explicitly to start again."
+            "value": "Screen sharing was stopped Resume explicitly to start again"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Доступ к экрану остановлен. Нажмите «Возобновить», чтобы продолжить."
+            "value": "Доступ к экрану остановлен Нажмите «Возобновить», чтобы продолжить"
           }
         }
       }
@@ -2390,13 +2294,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Capture stopped. Check permission and re-select the source if necessary."
+            "value": "Capture stopped Check permission and re-select the source if necessary"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Захват остановлен. Проверьте разрешение и при необходимости выберите источник заново."
+            "value": "Захват остановлен Проверьте разрешение и при необходимости выберите источник заново"
           }
         }
       }
@@ -2406,13 +2310,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Display geometry changed. Edit this watch and select its area again."
+            "value": "Display geometry changed Edit this watch and select its area again"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Геометрия дисплея изменилась. Измените наблюдение и выберите область заново."
+            "value": "Геометрия дисплея изменилась Измените наблюдение и выберите область заново"
           }
         }
       }
@@ -2422,13 +2326,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The selected window is unavailable. Restore it or select a new source."
+            "value": "The selected window is unavailable Restore it or select a new source"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выбранное окно недоступно. Разверните его или выберите новый источник."
+            "value": "Выбранное окно недоступно Разверните его или выберите новый источник"
           }
         }
       }
@@ -2438,13 +2342,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The display is disconnected or asleep."
+            "value": "The display is disconnected or asleep"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Дисплей отключён или находится в режиме сна."
+            "value": "Дисплей отключён или находится в режиме сна"
           }
         }
       }
@@ -2454,13 +2358,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Display geometry changed. Select a new source for this watch."
+            "value": "Display geometry changed Select a new source for this watch"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Геометрия дисплея изменилась. Выберите новый источник для наблюдения."
+            "value": "Геометрия дисплея изменилась Выберите новый источник для наблюдения"
           }
         }
       }
@@ -2470,13 +2374,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Source unavailable. Restore the selected window or select its replacement."
+            "value": "Source unavailable Restore the selected window or select its replacement"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Источник недоступен. Разверните выбранное окно или выберите другое."
+            "value": "Источник недоступен Разверните выбранное окно или выберите другое"
           }
         }
       }
@@ -2486,13 +2390,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The selected area is unavailable."
+            "value": "The selected area is unavailable"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выбранная область недоступна."
+            "value": "Выбранная область недоступна"
           }
         }
       }
@@ -2502,13 +2406,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Allow Screen Recording and try again. macOS may require restarting PixelWatch."
+            "value": "Allow Screen Recording and try again macOS may require restarting PixelWatch"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Разрешите запись экрана и повторите попытку. macOS может потребовать перезапуска PixelWatch."
+            "value": "Разрешите запись экрана и повторите попытку macOS может потребовать перезапуска PixelWatch"
           }
         }
       }
@@ -2534,13 +2438,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Select one display or one application window."
+            "value": "Select one display or one application window"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выберите один дисплей или одно окно приложения."
+            "value": "Выберите один дисплей или одно окно приложения"
           }
         }
       }
@@ -2630,13 +2534,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The selected area has changed."
+            "value": "The selected area has changed"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Выбранная область изменилась."
+            "value": "Выбранная область изменилась"
           }
         }
       }
@@ -2646,13 +2550,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "The area changed after a stable period."
+            "value": "The area changed after a stable period"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Область изменилась после стабильного состояния."
+            "value": "Область изменилась после стабильного состояния"
           }
         }
       }
@@ -2662,13 +2566,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "\"%@\" appeared in your watched area."
+            "value": "\"%@\" appeared in your watched area"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Текст «%@» появился в наблюдаемой области."
+            "value": "Текст «%@» появился в наблюдаемой области"
           }
         }
       }
@@ -2678,13 +2582,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "\"%@\" disappeared from your watched area."
+            "value": "\"%@\" disappeared from your watched area"
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Текст «%@» исчез из наблюдаемой области."
+            "value": "Текст «%@» исчез из наблюдаемой области"
           }
         }
       }
@@ -2694,13 +2598,13 @@
         "en": {
           "stringUnit": {
             "state": "translated",
-            "value": "Text changed from \"%@\" to \"%@\"."
+            "value": "Text changed from \"%@\" to \"%@\""
           }
         },
         "ru": {
           "stringUnit": {
             "state": "translated",
-            "value": "Текст изменился с «%@» на «%@»."
+            "value": "Текст изменился с «%@» на «%@»"
           }
         }
       }
@@ -2765,6 +2669,102 @@
           "stringUnit": {
             "state": "translated",
             "value": "PixelWatch — %@"
+          }
+        }
+      }
+    },
+    "Select an area, set a rule and get notified\nPixelWatch keeps watching while you get back to work": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Select an area, set a rule and get notified\nPixelWatch keeps watching while you get back to work"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Выберите область, задайте правило и получите уведомление\nPixelWatch продолжит следить, пока вы занимаетесь своими делами"
+          }
+        }
+      }
+    },
+    "Local processing without accounts or cloud": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Local processing without accounts or cloud"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Всё локально, без аккаунтов и облака"
+          }
+        }
+      }
+    },
+    "Watch anything, miss nothing": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watch anything, miss nothing"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Следите за всем, не упускайте важное"
+          }
+        }
+      }
+    },
+    "Free and local, without subscriptions": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Free and local, without subscriptions"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Бесплатно и локально, без подписок"
+          }
+        }
+      }
+    },
+    "Your screen, your permission": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Your screen, your permission"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Ваш экран, ваше разрешение"
+          }
+        }
+      }
+    },
+    "Watch anything, miss nothing\nA small utility from SHOEV SYSTEMS": {
+      "localizations": {
+        "en": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Watch anything, miss nothing\nA small utility from SHOEV SYSTEMS"
+          }
+        },
+        "ru": {
+          "stringUnit": {
+            "state": "translated",
+            "value": "Следите за всем, не упускайте важное\nКомпактная утилита от SHOEV SYSTEMS"
           }
         }
       }

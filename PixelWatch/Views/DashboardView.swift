@@ -9,19 +9,19 @@ struct DashboardView: View {
     var body: some View {
         VStack(spacing: 0) {
             HStack(spacing: 12) {
-                Image(systemName: "viewfinder").font(.title2).foregroundStyle(Design.accent)
-                VStack(alignment: .leading, spacing: 2) { Text("SHOEV PRODUCTS").font(.system(size: 9, weight: .semibold)).tracking(2).foregroundStyle(Design.silver); Text("PixelWatch").font(.title2.weight(.semibold)); Text(store.format("Active watches: %ld", store.activeCount)).font(.caption).foregroundStyle(.secondary) }
+                BrandLogo().frame(width: 40, height: 40)
+                VStack(alignment: .leading, spacing: 2) { Text("SHOEV SYSTEMS").font(.system(size: 9, weight: .semibold)).tracking(2).foregroundStyle(Design.silver); Text("PixelWatch").font(.title2.weight(.semibold)); Text(store.format("Active watches: %ld", store.activeCount)).font(.caption).foregroundStyle(.secondary) }
                 Spacer()
                 Button(action: newWatch) { Label("New Watch", systemImage: "plus") }.buttonStyle(.borderedProminent).foregroundStyle(Design.actionText).keyboardShortcut("n")
             }.padding(24)
             Rectangle().fill(Design.gold.opacity(0.5)).frame(height: 1)
             if store.data.watches.isEmpty {
                 VStack(spacing: 18) {
-                    Image(systemName: "viewfinder.circle").font(.system(size: 64, weight: .ultraLight)).foregroundStyle(Design.accent)
+                    BrandLogo().frame(width: 80, height: 80)
                     Text("Keep an eye on what matters.").font(.title2.weight(.medium))
-                    Text("Select an area. Set a rule. Get notified.\nPixelWatch keeps watching while you get back to work.").multilineTextAlignment(.center).foregroundStyle(.secondary)
+                    Text("Select an area, set a rule and get notified\nPixelWatch keeps watching while you get back to work").multilineTextAlignment(.center).foregroundStyle(.secondary)
                     Button("Create your first watch", action: newWatch).buttonStyle(.borderedProminent).foregroundStyle(Design.actionText)
-                    Text("Local processing. No accounts. No cloud.").font(.caption).foregroundStyle(.tertiary)
+                    Text("Local processing without accounts or cloud").font(.caption).foregroundStyle(.tertiary)
                 }.frame(maxWidth: .infinity,maxHeight: .infinity)
             } else {
                 HSplitView {
@@ -54,7 +54,7 @@ struct DashboardView: View {
             Divider()
             HStack {
                 Image(systemName: "lock.shield"); Text("All analysis stays on your Mac.")
-                Spacer(); Text("SHOEV PRODUCTS  /  0.1.5")
+                Spacer(); Text("SHOEV SYSTEMS  /  0.1.6")
             }.font(.caption2).foregroundStyle(.tertiary).padding(.horizontal,24).padding(.vertical,12)
         }.background(Design.background).tint(Design.accent).frame(minWidth: 920,minHeight: 640)
             .sheet(item: $editing) { WatchEditorView(store: store, watch: $0, existing: true) }

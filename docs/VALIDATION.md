@@ -1,11 +1,11 @@
 # Validation — 2026-10-15
 
-Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.5 changes only the icon and version labels. The local XCTest results below were obtained for 0.1.1 on 2026-10-14; the universal app, embedded icon, signature and DMG were rebuilt and verified for 0.1.5.
+Verification was performed on the available Apple Silicon macOS host using Xcode 26.3 (17C529), Swift 6.2.4 and the macOS 26.2 SDK, with a macOS 26.0 deployment target. Version 0.1.6 adopts the approved logo throughout the app, uses SHOEV SYSTEMS as the sole company brand and removes sentence-ending periods from interface copy. The native suite passed 55 tests during logo integration; the final copy changes passed 8 targeted native localization tests and all 46 standalone core tests. The universal Release, embedded PNG/ICNS, signature and DMG were rebuilt and verified after the final changes.
 
 | Check | Result |
 | --- | --- |
 | Xcode Debug compilation | Passed |
-| Xcode hosted XCTest, arm64 | **55 tests passed, 0 failures** |
+| Xcode hosted XCTest, arm64 | **55 tests passed; final localization follow-up: 8 tests passed, 0 failures** |
 | Standalone Swift package XCTest | **46 tests passed, 0 failures** |
 | Release compilation | Passed for **arm64 and x86_64** |
 | Universal executable verification | `lipo -archs` reports `x86_64 arm64` |
@@ -19,10 +19,10 @@ Verification was performed on the available Apple Silicon macOS host using Xcode
 | Incremental localization regression | Compiled Russian/English tables verified after a repeated build |
 | Shell packaging scripts | `bash -n` passed |
 | Debug startup and onboarding | Original flow inspected; all onboarding strings now have Russian/English translations |
-| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.5 compiled with unchanged UI and the platinum pupil and silver corners on a transparent background visually inspected at 256 px |
+| Native UI smoke check | Russian dashboard/settings and language switching verified in 0.1.0; 0.1.6 launched; primary logo verified on Dashboard and About, sole SHOEV SYSTEMS brand verified, Russian Dashboard copy verified without sentence-ending periods |
 | Settings keyboard shortcut | Command-comma opens real functional settings |
 | Russian/English interface switching | Verified without restart, including the Russian dashboard and rule parameters |
-| Release startup | 0.1.0 packaged app launched and displayed Dashboard; 0.1.5 rebuilt and signed, startup not repeated |
+| Release startup | 0.1.6 packaged app launched, Dashboard and Settings inspected, then restarted to verify the final company name and copy |
 | Real screen/window monitoring with permission | **Not verified in this environment** |
 | Native notification delivery/click routing | Implemented, **not manually verified with an OS permission grant** |
 | Sleep/lock/hotplug/protected source matrix | Implemented safeguards; **hardware/manual verification pending** |
@@ -36,16 +36,16 @@ The tests exercise all five detection modes, text normalization, confirmation/re
 
 No application Swift compilation errors or concurrency warnings remain. Xcode emits its standard AppIntents metadata notice for an app without an AppIntents dependency. Hosted tests can emit OS framework diagnostics for local Vision models or system services; these did not cause test failures. macOS on this host also reports that `hdiutil create` is deprecated, but creation/verification pass and that command remains compatible with the target macOS baseline.
 
-Build/test logs are available in the ignored local directory `build/verification/`. The final XCTest result bundle is `build/Logs/Test/Test-PixelWatch-2026.10.14_14-26-12-+0400.xcresult`.
+Build/test logs are available in the ignored local directory `build/verification/`. The final XCTest result bundle is `build/Logs/Test/Test-PixelWatch-2026.10.15_00-52-41-+0400.xcresult`.
 
 GitHub Actions verification for the current source: [macOS build and tests](https://github.com/TiDazai/Shoev-PixelWatch/actions). The preceding 0.1.0 run passed on macOS 15; that version remains available as a separate release.
 
 ## Delivered artifact
 
-`dist/SHOEV-PixelWatch-0.1.5.dmg` — SHA-256:
+`dist/SHOEV-PixelWatch-0.1.6.dmg` — SHA-256:
 
 ```text
-485008745be4e1f2362b80cfb5a6ad6dff182c667af296cafa62cb6456441754
+ee24386ce3fcfa2c9982742bc229bb19070c1d54049d81f847cd214ab00b9d74
 ```
 
 The app and DMG are ad-hoc-signed preview artifacts. Source code is published at https://github.com/TiDazai/Shoev-PixelWatch. [RELEASE.md](RELEASE.md) documents Developer ID signing and Apple notarization for public distribution. No CPU or energy-use limits are asserted without profiling.

@@ -1,4 +1,4 @@
-# SHOEV PixelWatch 0.1.5
+# SHOEV PixelWatch 0.1.6
 
 <img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — platinum pupil and silver frame">
 
@@ -6,13 +6,13 @@
 
 [Русский](README.md) · [English](README.en.md)
 
-Нативная утилита для macOS от **SHOEV SYSTEMS / SHOEV PRODUCTS**. Выберите область экрана или окно приложения, задайте правило и получите уведомление об изменении. Бесплатно, лицензия MIT. Без аккаунтов, подписок, облака и телеметрии.
+Нативная утилита для macOS от **SHOEV SYSTEMS**. Выберите область экрана или окно приложения, задайте правило и получите уведомление об изменении. Бесплатно, лицензия MIT. Без аккаунтов, подписок, облака и телеметрии.
 
 Интерфейс использует фирменные цвета SHOEV: **платину, золото и серебро**. Полностью поддерживаются **русский и английский языки**. Язык меняется сразу в открытых окнах и меню; новые установки по умолчанию используют русский.
 
 ## Скачать и запустить
 
-Готовые сборки доступны в [GitHub Releases](https://github.com/TiDazai/Shoev-PixelWatch/releases). Минимальная система — **macOS 26.0**. Приложение собирается для **Apple Silicon и Intel**.
+Готовые сборки доступны в [GitHub Releases](https://github.com/TiDazai/Shoev-PixelWatch/releases). Основное лого — утверждённый прозрачный знак с серебряными рамками и платиновым зрачком. Он используется в иконке macOS, интерфейсе и строке меню. Минимальная система — **macOS 26.0**. Приложение собирается для **Apple Silicon и Intel**.
 
 1. Скачайте DMG, откройте его и перенесите SHOEV PixelWatch в «Программы».
 2. Запустите приложение. Оно работает в строке меню.
@@ -71,7 +71,7 @@ Release и DMG:
 ./scripts/create-dmg.sh
 ```
 
-Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.5.dmg`.
+Результат: `dist/SHOEV PixelWatch.app` и `dist/SHOEV-PixelWatch-0.1.6.dmg`.
 
 ## Проверки
 

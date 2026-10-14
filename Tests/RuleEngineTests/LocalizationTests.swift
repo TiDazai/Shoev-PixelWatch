@@ -9,6 +9,8 @@ final class LocalizationTests: XCTestCase {
         XCTAssertEqual(L10n.text("New Watch",language:"ru"),"Новое наблюдение")
         XCTAssertEqual(L10n.text("New Watch",language:"en"),"New Watch")
         XCTAssertEqual(L10n.text("A user-provided name",language:"ru"),"A user-provided name")
+        XCTAssertEqual(L10n.text("User note.",language:"en"),"User note.")
+        XCTAssertEqual(L10n.text("Version 0.1.6 · MIT License",language:"en"),"Version 0.1.6 · MIT License")
         XCTAssertGreaterThan(L10n.translatedKeys.count,160)
     }
     func testAllModesAndStatusesHaveRussianTranslations() {
@@ -19,12 +21,13 @@ final class LocalizationTests: XCTestCase {
     }
     func testFormattingPreservesTextIncludingPercentCharacters() {
         XCTAssertEqual(L10n.format("Active watches: %ld",3,language:"ru"),"Активных наблюдений: 3")
-        XCTAssertEqual(L10n.format("\"%@\" appeared in your watched area.","Completed 100%",language:"ru"),"Текст «Completed 100%» появился в наблюдаемой области.")
+        XCTAssertEqual(L10n.format("\"%@\" appeared in your watched area.","Completed 100%",language:"ru"),"Текст «Completed 100%» появился в наблюдаемой области")
+        XCTAssertEqual(L10n.format("\"%@\" appeared in your watched area.","Completed 100%.",language:"en"),"\"Completed 100%.\" appeared in your watched area")
     }
     func testEventsCanChangeLanguageWithoutChangingRecognizedText() {
         let event = WatchEvent(watchID:UUID(),date:Date(),reason:"Stored English fallback",previous:"Pending",current:"Approved",mode:.textChanges)
-        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Текст изменился с «Pending» на «Approved».")
-        XCTAssertEqual(EventPresentation.reason(event,language:"en"),"Text changed from \"Pending\" to \"Approved\".")
+        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Текст изменился с «Pending» на «Approved»")
+        XCTAssertEqual(EventPresentation.reason(event,language:"en"),"Text changed from \"Pending\" to \"Approved\"")
         XCTAssertEqual(EventPresentation.previous(event,language:"ru"),"Pending")
         XCTAssertEqual(EventPresentation.current(event,language:"ru"),"Approved")
     }
@@ -33,11 +36,11 @@ final class LocalizationTests: XCTestCase {
         let data = Data("{\"id\":\"\(id)\",\"watchID\":\"\(id)\",\"date\":0,\"reason\":\"The selected area has changed.\"}".utf8)
         let event = try JSONDecoder().decode(WatchEvent.self,from:data)
         XCTAssertNil(event.mode)
-        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Выбранная область изменилась.")
+        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Выбранная область изменилась")
     }
     func testLegacyTextEventsRemainLocalized() {
         let event = WatchEvent(watchID:UUID(),date:Date(),reason:"\"Completed 100%\" appeared in your watched area.")
-        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Текст «Completed 100%» появился в наблюдаемой области.")
+        XCTAssertEqual(EventPresentation.reason(event,language:"ru"),"Текст «Completed 100%» появился в наблюдаемой области")
     }
     func testRussianIsDefaultAndEnglishPreferencePersists() throws {
         XCTAssertEqual(AppSettings().language,"ru")

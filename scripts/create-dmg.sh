@@ -8,4 +8,4 @@ trap 'rm -rf "$stage"' EXIT
 ditto "$app" "$stage/SHOEV PixelWatch.app"
 cp "$root/LICENSE" "$stage/LICENSE.txt"
 ln -s /Applications "$stage/Applications"
-hdiutil create -volname 'SHOEV PixelWatch' -srcfolder "$stage" -ov -format UDZO "$root/dist/SHOEV-PixelWatch-0.1.5.dmg"
+hdiutil create -volname 'SHOEV PixelWatch' -srcfolder "$stage" -ov -format UDZO "$root/dist/SHOEV-PixelWatch-0.1.6.dmg"

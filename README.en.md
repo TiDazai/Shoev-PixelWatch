@@ -1,12 +1,14 @@
-# SHOEV PixelWatch 0.1.5
+# SHOEV PixelWatch 0.1.6
 
 <img src="docs/assets/PixelWatch-icon.png" width="128" alt="SHOEV PixelWatch — platinum pupil and silver frame">
 
 **Watch anything. Miss nothing.**
 
-A native macOS menu bar utility from SHOEV SYSTEMS / SHOEV PRODUCTS. Select a screen region or application window, set a rule and receive a native notification when it changes. Free under the MIT license. No accounts, subscriptions, network services or third-party dependencies.
+A native macOS menu bar utility from SHOEV SYSTEMS. Select a screen region or application window, set a rule and receive a native notification when it changes. Free under the MIT license. No accounts, subscriptions, network services or third-party dependencies.
 
 [Русский](README.md) · English
+
+The primary logo is the approved transparent silver frame with a platinum pupil. The app icon, dashboard, welcome, About and menu bar share this artwork; macOS renders the menu-bar template in its system color.
 
 ## Run
 

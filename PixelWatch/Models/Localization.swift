@@ -17,7 +17,10 @@ public enum L10n {
     }()
     public static var translatedKeys: Set<String> { Set(russian.keys) }
     public static func text(_ key: String, language: String) -> String {
-        language.hasPrefix("ru") ? (russian[key] ?? key) : key
+        guard let translation = russian[key] else { return key }
+        if language.hasPrefix("ru") { return translation }
+        // Style only known interface templates, before inserting user text.
+        return key.replacingOccurrences(of: "\\.(?=\\s|$)", with: "", options: .regularExpression)
     }
     public static func format(_ key: String, _ arguments: CVarArg..., language: String) -> String {
         format(key, arguments: arguments, language: language)
