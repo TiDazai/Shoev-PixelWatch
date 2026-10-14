@@ -1,0 +1,36 @@
+name: macOS build and tests
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build-and-test:
+    runs-on: macos-15
+    env:
+      DEVELOPER_DIR: /Applications/Xcode_26.3.app/Contents/Developer
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+      - name: Check localization coverage and format arguments
+        run: python3 scripts/check-localization.py
+      - name: Test standalone rule engine and local OCR
+        run: swift test
+      - name: Test native app and compiled localization resources
+        run: |
+          xcodebuild -project PixelWatch.xcodeproj -scheme PixelWatch \
+            -configuration Debug -derivedDataPath build \
+            -destination "platform=macOS,arch=$(uname -m)" test
+      - name: Verify localization survives an incremental build
+        run: |
+          xcodebuild -project PixelWatch.xcodeproj -scheme PixelWatch \
+            -configuration Debug -derivedDataPath build \
+            -destination "platform=macOS,arch=$(uname -m)" \
+            -only-testing:PixelWatchTests/CompiledLocalizationCatalogTests test
+      - name: Build universal Release and DMG
+        run: |
+          ./scripts/build-release.sh
+          ./scripts/create-dmg.sh
